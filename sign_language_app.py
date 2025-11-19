@@ -13,6 +13,20 @@ import threading
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, WebRtcMode
 import av
 
+# Handle TensorFlow import with fallback
+try:
+    import tensorflow as tf
+    TENSORFLOW_AVAILABLE = True
+except ImportError:
+    try:
+        import tflite_runtime.interpreter as tflite
+        tf = tflite
+        TENSORFLOW_AVAILABLE = True
+        st.success("Using tflite-runtime")
+    except ImportError:
+        TENSORFLOW_AVAILABLE = False
+        st.warning("TensorFlow not available - using demo mode")
+
 # Page config
 st.set_page_config(
     page_title="Sign Language Recognition - LIVE",
