@@ -1,4 +1,9 @@
-# Add requirements.txt
 streamlit==1.28.0
-numpy==1.24.3
-Pillow==10.0.0
+numpy==2.1.2
+opencv-python
+mediapipe
+streamlit-webrtc
+tensorflow==2.17.0
+pillow
+av
+scikit-learn
