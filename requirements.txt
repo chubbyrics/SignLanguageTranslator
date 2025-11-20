@@ -1,9 +1,10 @@
 streamlit==1.28.0
-numpy==2.1.2
+numpy==1.24.3
 opencv-python
-mediapipe
+mediapipe==0.9.0.1
 streamlit-webrtc
-tensorflow==2.17.0
+tensorflow==2.12.0
 pillow
 av
 scikit-learn
+
