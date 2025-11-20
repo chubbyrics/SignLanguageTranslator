@@ -1,5 +1,5 @@
 import streamlit as st
-import cv2
+import cv2 as cv2_headless
 import numpy as np
 import mediapipe as mp
 import tensorflow as tf
