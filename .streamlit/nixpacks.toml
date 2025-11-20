@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = [
+  "python310",
+  "opencv",
+  "ffmpeg",
+  "libGL",
+  "libGLU",
+  "libx11",
+  "libxcb",
+  "libxext"
+]
