@@ -1,7 +1,18 @@
-streamlit
+# Use the CPU-only version of TensorFlow to avoid CUDA driver errors
+tensorflow-cpu==2.15.0
+
+# Pin MediaPipe to a stable version known to work with Streamlit
+mediapipe==0.10.11
+
+# Essential for web-based camera streams
 streamlit-webrtc
-mediapipe
-tensorflow
+
+# Critical: Prevent the Numpy 2.0 conflict (which breaks TF and MediaPipe)
+numpy<2.0.0
+
+# Use headless OpenCV for cloud environments
 opencv-python-headless
-numpy
+
+# Standard Streamlit and Image processing
+streamlit
 Pillow
